@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: "poppins", "sant-serif";
+}
+:root {
+  --bg-color: #081b29;
+  --second-bg-color: #112e42;
+  --text-color: #ededed;
+  --main-color: #00abf0;
+}
+html {
+  background: var(--second-bg-color);
+}
+
+.header {
+  background: ;
+  min-width: 100%;
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+}
+.logo {
+  font-size: 3rem;
+  text-decoration: none;
+  color: var(--text-color);
+  padding-left: 10px;
+}
+.nav-bar {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  border: #00abf0 solid;
+  height: 10vh;
+  gap: 20px;
+}
+.nav-bar a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  transition: 0.5s;
+}
+.nav-bar :nth-child(1) {
+  color: var(--main-color);
+}
+
+.nav-bar a:hover {
+  color: var(--main-color);
+}
+
+section {
+  min-height: 100vh;
+  padding-top: 5.5rem;
+  display: flex;
+  border: blue solid;
+  flex-wrap: wrap;
+}
+.main-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: #000 solid;
+  width: 60%;
+  position: relative;
+  height: 100vh;
+}
+.titolo {
+  font-size: 3rem;
+  color: var(--text-color);
+}
+.titolo span {
+  color: var(--main-color);
+}
+.container-maintext {
+  position: relative;
+  border: violet solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  gap: 2rem;
+}
+.paragrafo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+.paragrafo p {
+  max-width: 50rem;
+}
+.text-animated {
+  font-size: 3.5rem;
+  -webkit-text-stroke: 0.7px var(--main-color);
+  color: transparent;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 5rem;
+  width: 32rem;
+  border: red solid;
+}
+
+.btn {
+  display: flex;
+  background: var(--bg-color);
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 100%;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: var(--text-color);
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  flex-wrap: wrap;
+  border: #00abf0 solid;
+  text-decoration: none;
+}
+
+.btn:hover {
+  color: beige;
+}
+
+.btn:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: 0;
+  background: var(--main-color);
+  z-index: -1;
+  transition: 0.5s;
+}
+.btn:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  right: 0;
+  background: var(--main-color);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.btn:hover::before {
+  width: 100%;
+  border: #112e42;
+}
+
+.main-img {
+  display: flex;
+  position: relative;
+  width: 40%;
+  border: red solid;
+
+  justify-content: center;
+  min-width: 40%;
+}
+.home-sci {
+  position: relative;
+
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+}
+.home-sci a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: #00abf0 solid;
+  color: var(--text-color);
+  padding: 5px;
+  text-decoration: none;
+  border-radius: 50%;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  font-size: 2rem;
+}
+
+.home-sci a::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--main-color);
+  z-index: -1;
+  transition: 0.5s;
+}
+.home-sci a:hover::before {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .btn-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: auto;
+  }
+  .home {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .container-maintext {
+    max-width: 100%;
+  }
+  .main-img {
+    width: 100%;
+  }
+  .main-text {
+    width: 100%;
+  }
+}
